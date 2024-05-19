@@ -175,25 +175,8 @@ class Buff(Command):
 class Strike(Command):
     """Attacks using 'Solar Slash' in a given direction."""
 
-    def __init__(self, direction, attacks=2, repetitions=1):
-        super().__init__(locals())
-        self.direction = settings.validate_horizontal_arrows(direction)
-        self.attacks = int(attacks)
-        self.repetitions = int(repetitions)
-
     def main(self):
-        time.sleep(0.05)
-        key_down(self.direction)
-        time.sleep(0.05)
-        if config.stage_fright and utils.bernoulli(0.7):
-            time.sleep(utils.rand_float(0.1, 0.3))
-        for _ in range(self.repetitions):
-            press(Key.BIG_BANG, self.attacks, up_time=1)
-        key_up(self.direction)
-        if self.attacks > 2:
-            time.sleep(0.3)
-        else:
-            time.sleep(0.2)
+        press(Key.BIG_BANG, 3)
 
 
 class FlashJump(Command):
