@@ -1,0 +1,25 @@
+*, x=0.218, y=0.218, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=right, attacks=4, repetitions=4
+    Wait, duration=0.5
+    SolarSlash, direction=right, attacks=3, repetitions=2
+*, x=0.45, y=0.218, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=left, attacks=3, repetitions=3
+    SolarSlash, direction=right, attacks=3, repetitions=3
+    SolarSlash, direction=left, attacks=3, repetitions=3
+    SolarSlash, direction=right, attacks=3, repetitions=3
+*, x=0.646, y=0.218, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=right, attacks=3, repetitions=2
+    SolarSlash, direction=left, attacks=3, repetitions=2
+    FlashJump, direction=right
+*, x=0.83, y=0.149, frequency=1, skip=False, adjust=true
+    SolarSlash, direction=left, attacks=3, repetitions=2
+    SolarSlash, direction=left, attacks=3, repetitions=2
+*, x=0.628, y=0.149, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=left, attacks=3, repetitions=2
+    SolarSlash, direction=left, attacks=3, repetitions=2
+*, x=0.486, y=0.103, frequency=1, skip=False, adjust=true
+    SolarSlash, direction=left, attacks=4, repetitions=2
+    SolarSlash, direction=right, attacks=2, repetitions=2
+*, x=0.3, y=0.063, frequency=1, skip=False, adjust=False
+    Walk, direction=left, duration=0.5
+    Fall, distance=0.05

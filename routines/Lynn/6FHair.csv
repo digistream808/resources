@@ -1,0 +1,44 @@
+*, x=0.212, y=0.309, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+*, x=0.436, y=0.309, frequency=1, skip=False, adjust=False
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Roar
+    Strike, direction=left, attacks=2, repetitions=1
+*, x=0.661, y=0.309, frequency=1, skip=False, adjust=False
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+*, x=0.818, y=0.212, frequency=1, skip=False, adjust=False
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+*, x=0.435, y=0.212, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+*, x=0.254, y=0.224, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+*, x=0.261, y=0.08, frequency=1, skip=False, adjust=False
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+*, x=0.12, y=0.164, frequency=1, skip=False, adjust=true
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+*, x=0.497, y=0.103, frequency=1, skip=False, adjust=False
+    Strike, direction=right, attacks=2, repetitions=1
+    EarthPulverization
+    Strike, direction=left, attacks=2, repetitions=1
+*, x=0.703, y=0.127, frequency=1, skip=False, adjust=False
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+*, x=0.897, y=0.309, frequency=1, skip=False, adjust=False
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+*, x=0.436, y=0.309, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1

@@ -1,0 +1,21 @@
+*, x=0.282, y=0.374, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=right, attacks=3, repetitions=2
+    SolarSlash, direction=right, attacks=3, repetitions=2
+*, x=0.487, y=0.374, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=right, attacks=3, repetitions=2
+    SolarSlash, direction=left, attacks=3, repetitions=2
+*, x=0.687, y=0.374, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=left, attacks=3, repetitions=2
+    SolarSlash, direction=left, attacks=3, repetitions=2
+*, x=0.651, y=0.276, frequency=1, skip=False, adjust=true
+    SolarSlash, direction=left, attacks=3, repetitions=3
+*, x=0.61, y=0.178, frequency=1, skip=False, adjust=true
+    SolarSlash, direction=left, attacks=3, repetitions=2
+    SolarSlash, direction=left, attacks=3, repetitions=3
+*, x=0.59, y=0.092, frequency=1, skip=False, adjust=true
+    SolarSlash, direction=left, attacks=2, repetitions=3
+    SolarSlash, direction=left, attacks=2, repetitions=3
+*, x=0.347, y=0.209, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=right, attacks=3, repetitions=2
+    Fall, distance=0.05
+    SolarSlash, direction=right, attacks=3, repetitions=2

@@ -1,0 +1,22 @@
+*, x=0.677, y=0.242, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+*, x=0.613, y=0.056, frequency=1, skip=False, adjust=False
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+*, x=0.323, y=0.177, frequency=1, skip=False, adjust=False
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+*, x=0.274, y=0.323, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1

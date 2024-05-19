@@ -1,0 +1,28 @@
+*, x=0.807, y=0.417, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+*, x=0.567, y=0.417, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+*, x=0.176, y=0.417, frequency=1, skip=False, adjust=False
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Adjust, x=0.176, y=0.417, max_steps=100
+    Move, x=0.176, y=0.43, max_steps=2
+*, x=0.214, y=0.160, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+*, x=0.535, y=0.123, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+*, x=0.754, y=0.160, frequency=1, skip=False, adjust=False
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Strike, direction=left, attacks=2, repetitions=1
+    Strike, direction=right, attacks=2, repetitions=1
+    Fall, distance=0.05
