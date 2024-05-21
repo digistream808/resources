@@ -1,0 +1,30 @@
+*, x=0.343, y=0.227, frequency=1, skip=False, adjust=False
+    Strike
+    Strike
+    Strike
+*, x=0.576, y=0.227, frequency=1, skip=False, adjust=False
+    Strike
+    Strike
+    Teleport, direction=up, jump=False
+*, x=0.576, y=0.152, frequency=1, skip=False, adjust=False
+    Strike
+    Strike
+*, x=0.343, y=0.152, frequency=1, skip=False, adjust=False
+    Strike
+    Strike
+*, x=0.343, y=0.076, frequency=1, skip=False, adjust=False
+    Strike
+    Strike
+    Teleport, direction=up, jump=False
+*, x=0.576, y=0.076, frequency=1, skip=False, adjust=False
+    Strike
+    Strike
+*, x=0.5, y=0.076, frequency=1, skip=False, adjust=False
+    Strike
+    Strike
+    Strike
+    Fall, distance=0.05
+    Strike
+    Strike
+    Strike
+    Fall, distance=0.05
