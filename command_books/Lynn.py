@@ -20,6 +20,7 @@ class Key:
     MOTHERS_NATURE = '3'
     AURA_OF_DESTINY = '4'
     HEAL ='5'
+    MP_POT = 'r'
 
 
     # Buffs Toggle
@@ -104,43 +105,52 @@ class Adjust(Command):
             error = utils.distance(config.player_pos, self.target)
             toggle = not toggle
 
-
 class Buff(Command):
     """Uses each buff once."""
 
     def __init__(self):
         super().__init__(locals())
         self.cd120_buff_time = 0
-        self.cd60_buff_time = 30
-        self.cdmin_buff_time = 0
-        self.cd240_buff_time = 0
+        self.cd60a_buff_time = 0
+        self.cd60b_buff_time = 0
+        self.cdpot_buff_time = 0
         self.cd900_buff_time = 0
         self.decent_buff_time = 0
+        self.heal_active = True  # Indicates which buff to use first: HEAL or MOTHERS_NATURE
 
     def main(self):
         buffs = []
         now = time.time()
 
         if self.cd120_buff_time == 0 or now - self.cd120_buff_time > 120:
-            press(Key.NATURES_PROVIDENCE,3)
+            press(Key.NATURES_PROVIDENCE, 3)
             self.cd120_buff_time = now
-        if self.cd60_buff_time == 0 or now - self.cd60_buff_time > 60:
-            press(Key.HEAL,3)
-            self.cd60_buff_time = now
-        if self.cdmin_buff_time == 0 or now - self.cdmin_buff_time > 60:
-            press(Key.MOTHERS_NATURE,3)
-            self.cdmin_buff_time = now
-        if self.cd240_buff_time == 0 or now - self.cd240_buff_time > 240:
-	        self.cd240_buff_time = now
-        if self.cd900_buff_time == 0 or now - self.cd900_buff_time > 900:
-            press(Key.MAPLE_WARRIOR,3)
-            self.cd900_buff_time = now
-        if self.decent_buff_time == 0 or now - self.decent_buff_time > 270:
-	        for key in buffs:
-		        press(key, 1, up_time=0.3)
-	        self.decent_buff_time = now		
 
-			
+        if self.heal_active:
+            if self.cd60a_buff_time == 0 or now - self.cd60a_buff_time > 60:
+                press(Key.HEAL, 3)
+                self.cd60a_buff_time = now
+                self.heal_active = False  # Switch to MOTHERS_NATURE next
+        else:
+            if self.cd60b_buff_time == 0 or now - self.cd60b_buff_time > 60:
+                press(Key.MOTHERS_NATURE, 3)
+                self.cd60b_buff_time = now
+                self.heal_active = True  # Switch to HEAL next
+
+        if self.cdpot_buff_time == 0 or now - self.cdpot_buff_time > 30:
+            press(Key.MP_POT, 2)
+            self.cdpot_buff_time = now
+
+        if self.cd900_buff_time == 0 or now - self.cd900_buff_time > 900:
+            press(Key.MAPLE_WARRIOR, 3)
+            self.cd900_buff_time = now
+
+        if self.decent_buff_time == 0 or now - self.decent_buff_time > 270:
+            for key in buffs:
+                press(key, 1, up_time=0.3)
+            self.decent_buff_time = now
+
+
 class Strike(Command):
     """Attacks using 'Solar Slash' in a given direction."""
 
