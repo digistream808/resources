@@ -12,29 +12,26 @@ class Key:
     # Movement
     JUMP = 'space' 
     FLASH_JUMP = 'space' 
-    SHADOW_ASSAULT = 't' 
 
     # Buffs
-    SHADOW_PARTNER = '1' 
-    MAPLE_WARRIOR = '2' 
-    EPIC_ADVENTURE = '3'
-    SPEED_INFUSION = '8'
-    HOLY_SYMBOL = '4'
-    SHARP_EYE = '5'
-    COMBAT_ORDERS = '6'
-    ADVANCED_BLESSING = '7'
+    RITUAL_FAN_ACCELERATION = '1' 
+    ANIMA_WARRIOR = '2' 
+    DECENT_ADV_BLESSING = '3'
+    CLONE = '4'
+    MP_POT = '5'
+    HP_POT = '6' 
 
     # Skills
-    CRUEL_STAB = 'q' 
-    MESO_EXPLOSION = 'w' 
-    SUDDEN_RAID = 'e'
-    DARK_FLARE = 's' 
-    SHADOW_VEIL = 'a' 
-    ARACHNID = 'f4' 
-    ERDA_SHOWER = 'f5' 
-    TRICKBLADE = 'd'
-    SLASH_SHADOW_FORMATION = 'v'
-    SONIC_BLOW = 'b'
+    IRON_FAN_GALE = 'q' 
+    STONE_TREMOR = 'w' 
+    HEAVEN_FLAME = 'e'
+    CUDGEL = 'r' 
+    BUTTERFLY_DREAM = 'a' 
+    GHOST_FLAME = 's'
+    STONE = 'd'
+    GODS = 'f'
+
+
 
 
 #########################

@@ -116,7 +116,6 @@ class Buff(Command):
         self.cdpot_buff_time = 0
         self.cd900_buff_time = 0
         self.decent_buff_time = 0
-        self.heal_active = True  # Indicates which buff to use first: HEAL or MOTHERS_NATURE
 
     def main(self):
         buffs = []

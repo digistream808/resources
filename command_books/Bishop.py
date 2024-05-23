@@ -144,7 +144,7 @@ class Buff(Command):
 
     def __init__(self):
         super().__init__(locals())
-        self.cd120_buff_time = 0
+        self.cd60_buff_time = 0
         self.cd240_buff_time = 0
         self.cd260_buff_time = 0
         self.cd900_buff_time = 0
@@ -154,14 +154,14 @@ class Buff(Command):
         buffs = []
         now = time.time()
 
-        if self.cd120_buff_time == 0 or now - self.cd120_buff_time > 120:
-            self.cd120_buff_time = now
+        if self.cd60_buff_time == 0 or now - self.cd60_buff_time > 60:
+            press(Key.BAHAMUT,3)
+            self.cd60_buff_time = now
         if self.cd240_buff_time == 0 or now - self.cd240_buff_time > 240:
             press(Key.BLESSING,3)
             press(Key.HOLY_SYMBOL,3)
             self.cd240_buff_time = now
         if self.cd260_buff_time == 0 or now - self.cd260_buff_time > 260:
-            press(Key.BAHAMUT,3)
             self.cd260_buff_time = now
         if self.cd900_buff_time == 0 or now - self.cd900_buff_time > 900:
             press(Key.MAPLE_WARRIOR,3)
