@@ -12,7 +12,10 @@
 *, x=0.6, y=0.063, frequency=1, skip=False, adjust=False
     Strike
     Strike
-*, x=0.341, y=0.063, frequency=1, skip=False, adjust=False
+*, x=0.45, y=0.063, frequency=1, skip=False, adjust=False
+    Strike
+    Strike
+*, x=0.341, y=0.063, frequency=1, skip=False, adjust=true
     Strike
     Strike
     Fall, distance=0.05
