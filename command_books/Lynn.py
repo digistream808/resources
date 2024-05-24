@@ -120,6 +120,7 @@ class Buff(Command):
     def main(self):
         buffs = []
         now = time.time()
+        self.heal_active = True  # Switch to HEAL next
 
         if self.cd120_buff_time == 0 or now - self.cd120_buff_time > 120:
             press(Key.NATURES_PROVIDENCE, 3)
