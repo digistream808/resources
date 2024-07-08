@@ -1,0 +1,17 @@
+*, x=0.281, y=0.582, frequency=1, skip=False, adjust=true
+    SolarSlash, direction=left, attacks=2, repetitions=3
+    SolarSlash, direction=right, attacks=2, repetitions=3
+    Adjust, x=0.281, y=0.562, max_steps=3
+*, x=0.377, y=0.226, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=left, attacks=2, repetitions=3
+    SolarSlash, direction=right, attacks=2, repetitions=3
+*, x=0.630, y=0.253, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=left, attacks=2, repetitions=3
+    SolarSlash, direction=right, attacks=2, repetitions=3
+    Fall, distance=0.05
+*, x=0.43, y=0.356, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=left, attacks=2, repetitions=3
+    SolarSlash, direction=right, attacks=2, repetitions=3
+*, x=0.685, y=0.582, frequency=1, skip=False, adjust=False
+    SolarSlash, direction=left, attacks=2, repetitions=3
+    SolarSlash, direction=right, attacks=2, repetitions=3

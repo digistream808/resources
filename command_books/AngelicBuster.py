@@ -1,4 +1,4 @@
-"""A collection of all commands that Shadower can use to interact with the game. 	"""
+"""A collection of all commands that Adele can use to interact with the game. 	"""
 
 from src.common import config, settings, utils
 import time
@@ -10,27 +10,26 @@ from src.common.vkeys import press, key_down, key_up
 # List of key mappings
 class Key:
     # Movement
-    JUMP = 'space' 
-    FLASH_JUMP = 'space' 
+    JUMP = 'alt'
+    FLASH_JUMP = 'alt'
 
     # Buffs
-    SOUL_ELEMENT = '1' 
-    RISING_SUN = '2' 
-    EQUINOX_CYCLE = '3'
-    CALL_OF_CYGNUS = '4'
-    DECENT_SHARPEYES = '5'
-    DECENT_HOLY_SYMBOL = '6'
-    DECENT_COMBAT = '7'
-    DECENT_BLESS = '8'
-    DECENT_SPEED = 'o'
-    HEAL = '0'
-    
+    SOULSEEK = '1'
+    NOVA_WARRIOR = '2'
+    FINAL_CONTRACT = '3'
+    PRETTT_EXALT = '4'
+    ROLL = '5'
+    DECENT_SHARPEYES = '6'
+    DECENT_SPEED = '7'
+    COMBAT_ORDERS = '8'
+    HARD_BODY = '0'
+
     # Skills
-    SOLAR_SLASH = 'a' 
-    RIFT_OF_DAMNATION = 'q' 
-    COSMIC_FORGE = 'w'
-    COSMOS = 'e' 
-    SOUL_ECLIPSE = 'r'
+    TRINITY = 'a'
+    ROAR = 'q'
+    SUPERNOVA = 'f'
+    SPOTLIGHT = 'e'
+    SPARKLE = 't'
 
 
 #########################
@@ -122,20 +121,47 @@ class Buff(Command):
         now = time.time()
 
         if self.cd120_buff_time == 0 or now - self.cd120_buff_time > 120:
-            press(Key.COSMOS,2)
-            self.cd20_buff_time = now
+            self.cd60_buff_time = now
         if self.cd180_buff_time == 0 or now - self.cd180_buff_time > 180:
-	        self.cd180_buff_time = now
-        if self.cd200_buff_time == 0 or now - self.cd200_buff_time > 200:
-	        self.cd200_buff_time = now
+            press(Key.ROLL,2)
+            press(Key.DECENT_SHARPEYES,2)
+            press(Key.DECENT_SPEED,2)
+            press(Key.COMBAT_ORDERS,2)
+            press(Key.HARD_BODY,2)
+            self.cd180_buff_time = now
         if self.cd240_buff_time == 0 or now - self.cd240_buff_time > 240:
-	        self.cd240_buff_time = now
+            self.cd240_buff_time = now
         if self.cd900_buff_time == 0 or now - self.cd900_buff_time > 900:
-	        self.cd900_buff_time = now
-        if self.decent_buff_time == 0 or now - self.decent_buff_time > settings.buff_cooldown:
+            press(Key.NOVA_WARRIOR,3)
+            self.cd900_buff_time = now
+        if self.decent_buff_time == 0 or now - self.decent_buff_time > 270:
 	        for key in buffs:
-		        press(key, 3, up_time=0.5)
+		        press(key, 1, up_time=0.3)
 	        self.decent_buff_time = now		
+
+class trinity(Command):
+    """Attacks using 'Solar Slash' in a given direction."""
+
+    def __init__(self, direction, attacks=2, repetitions=1):
+        super().__init__(locals())
+        self.direction = settings.validate_horizontal_arrows(direction)
+        self.attacks = int(attacks)
+        self.repetitions = int(repetitions)
+
+    def main(self):
+        time.sleep(0.05)
+        key_down(self.direction)
+        time.sleep(0.05)
+        if config.stage_fright and utils.bernoulli(0.7):
+            time.sleep(utils.rand_float(0.1, 0.3))
+        for _ in range(self.repetitions):
+            press(Key.TRINITY, self.attacks, up_time=0.05)
+        key_up(self.direction)
+        if self.attacks > 2:
+            time.sleep(0.3)
+        else:
+            time.sleep(0.2)
+
 
 class FlashJump(Command):
     """Performs a flash jump in the given direction."""
@@ -155,34 +181,26 @@ class FlashJump(Command):
         key_up(self.direction)
         time.sleep(0.5)
 
-class SolarSlash(Command):
-    """Attacks using 'Solar Slash' in a given direction."""
-
-    def __init__(self, direction, attacks=2, repetitions=1):
-        super().__init__(locals())
-        self.direction = settings.validate_horizontal_arrows(direction)
-        self.attacks = int(attacks)
-        self.repetitions = int(repetitions)
+class Roar(Command):
+    """Uses Roar once."""
 
     def main(self):
-        time.sleep(0.05)
-        key_down(self.direction)
-        time.sleep(0.05)
-        if config.stage_fright and utils.bernoulli(0.7):
-            time.sleep(utils.rand_float(0.1, 0.3))
-        for _ in range(self.repetitions):
-            press(Key.SOLAR_SLASH, self.attacks, up_time=0.05)
-        key_up(self.direction)
-        if self.attacks > 2:
-            time.sleep(0.3)
-        else:
-            time.sleep(0.2)
+        press(Key.ROAR, 3)
 
-
-class SolarSlashRandomDirection(Command):
-    """Uses 'CruelStab' once."""
+class SuperNova(Command):
+    """Uses Earth Pulverization once."""
 
     def main(self):
-        press(Key.SOLAR_SLASH, 1, up_time=0.05)	
+        press(Key.SUPERNOVA, 3)
 
-       
+class Sparkle(Command):
+    """Uses Earth Pulverization once."""
+
+    def main(self):
+        press(Key.SPARKLE, 3)
+
+class Spotlight(Command):
+    """Uses Earth Pulverization once."""
+
+    def main(self):
+        press(Key.SPOTLIGHT, 3)

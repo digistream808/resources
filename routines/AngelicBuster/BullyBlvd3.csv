@@ -1,0 +1,39 @@
+*, x=0.32, y=0.293, frequency=1, skip=False, adjust=False
+    Spotlight
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+    FlashJump, direction=up
+*, x=0.35, y=0.194, frequency=1, skip=False, adjust=False
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+    FlashJump, direction=up
+*, x=0.38, y=0.125, frequency=1, skip=False, adjust=False
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+*, x=0.6, y=0.125, frequency=1, skip=False, adjust=true
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+*, x=0.815, y=0.069, frequency=1, skip=False, adjust=False
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+    Fall, distance=0.05
+*, x=0.845, y=0.293, frequency=1, skip=False, adjust=False
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+*, x=0.55, y=0.293, frequency=1, skip=False, adjust=False
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
+    trinity, direction=left, attacks=2, repetitions=2
+    trinity, direction=right, attacks=2, repetitions=2
