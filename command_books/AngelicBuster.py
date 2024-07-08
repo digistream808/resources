@@ -29,7 +29,7 @@ class Key:
     ROAR = 'q'
     SUPERNOVA = 'f'
     SPOTLIGHT = 'e'
-    SPARKLE = 't'
+    SPARKLE = 'r'
 
 
 #########################
@@ -124,22 +124,19 @@ class Buff(Command):
             self.cd60_buff_time = now
         if self.cd180_buff_time == 0 or now - self.cd180_buff_time > 180:
             press(Key.ROLL,2)
-            press(Key.DECENT_SHARPEYES,2)
-            press(Key.DECENT_SPEED,2)
-            press(Key.COMBAT_ORDERS,2)
-            press(Key.HARD_BODY,2)
             self.cd180_buff_time = now
         if self.cd240_buff_time == 0 or now - self.cd240_buff_time > 240:
             self.cd240_buff_time = now
         if self.cd900_buff_time == 0 or now - self.cd900_buff_time > 900:
             press(Key.NOVA_WARRIOR,3)
+            press(Key.HARD_BODY,1)
             self.cd900_buff_time = now
         if self.decent_buff_time == 0 or now - self.decent_buff_time > 270:
 	        for key in buffs:
 		        press(key, 1, up_time=0.3)
 	        self.decent_buff_time = now		
 
-class trinity(Command):
+class Roar(Command):
     """Attacks using 'Solar Slash' in a given direction."""
 
     def __init__(self, direction, attacks=2, repetitions=1):
@@ -155,7 +152,7 @@ class trinity(Command):
         if config.stage_fright and utils.bernoulli(0.7):
             time.sleep(utils.rand_float(0.1, 0.3))
         for _ in range(self.repetitions):
-            press(Key.TRINITY, self.attacks, up_time=0.05)
+            press(Key.ROAR, self.attacks, up_time=0.05)
         key_up(self.direction)
         if self.attacks > 2:
             time.sleep(0.3)
@@ -181,7 +178,7 @@ class FlashJump(Command):
         key_up(self.direction)
         time.sleep(0.5)
 
-class Roar(Command):
+class trinity(Command):
     """Uses Roar once."""
 
     def main(self):
