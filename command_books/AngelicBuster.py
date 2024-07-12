@@ -12,17 +12,17 @@ class Key:
     # Movement
     JUMP = 'alt'
     FLASH_JUMP = 'alt'
+    ROPE = 'x'
 
     # Buffs
     SOULSEEK = '1'
     NOVA_WARRIOR = '2'
     FINAL_CONTRACT = '3'
-    PRETTT_EXALT = '4'
+    PRETTT_EXALT = '4' 
     ROLL = '5'
     DECENT_SHARPEYES = '6'
     DECENT_SPEED = '7'
     COMBAT_ORDERS = '8'
-    HARD_BODY = '0'
 
     # Skills
     TRINITY = 'a'
@@ -30,6 +30,7 @@ class Key:
     SUPERNOVA = 'f'
     SPOTLIGHT = 'e'
     SPARKLE = 'r'
+    ERDA_SHOWER = '0'
 
 
 #########################
@@ -42,17 +43,24 @@ def step(direction, target):
     """
 
     num_presses = 2
+    mob = time.time()
+    atk = mob
     if direction == 'up' or direction == 'down':
         num_presses = 1
     if config.stage_fright and direction != 'up' and utils.bernoulli(0.75):
         time.sleep(utils.rand_float(0.1, 0.3))
     d_y = target[1] - config.player_pos[1]
-    if abs(d_y) > settings.move_tolerance * 1.5:
+    if abs(d_y) > settings.move_tolerance :
         if direction == 'down':
             press(Key.JUMP, 3)
         elif direction == 'up':
             press(Key.JUMP, 1)
     press(Key.FLASH_JUMP, num_presses)
+    if mob - atk > utils.rand_float(0.05, 0.15):
+        press(Key.ROAR,2)
+        atk = mob
+
+    
 
 
 class Adjust(Command):
@@ -122,14 +130,13 @@ class Buff(Command):
 
         if self.cd120_buff_time == 0 or now - self.cd120_buff_time > 120:
             self.cd60_buff_time = now
-        if self.cd180_buff_time == 0 or now - self.cd180_buff_time > 180:
-            press(Key.ROLL,2)
+        if self.cd180_buff_time == 0 or now - self.cd180_buff_time > 181:
+            press(Key.ROLL,4)
             self.cd180_buff_time = now
         if self.cd240_buff_time == 0 or now - self.cd240_buff_time > 240:
             self.cd240_buff_time = now
-        if self.cd900_buff_time == 0 or now - self.cd900_buff_time > 900:
+        if self.cd900_buff_time == 0 or now - self.cd900_buff_time > 950:
             press(Key.NOVA_WARRIOR,3)
-            press(Key.HARD_BODY,1)
             self.cd900_buff_time = now
         if self.decent_buff_time == 0 or now - self.decent_buff_time > 270:
 	        for key in buffs:
@@ -139,7 +146,7 @@ class Buff(Command):
 class Roar(Command):
     """Attacks using 'Solar Slash' in a given direction."""
 
-    def __init__(self, direction, attacks=2, repetitions=1):
+    def __init__(self, direction, attacks=3, repetitions=1):
         super().__init__(locals())
         self.direction = settings.validate_horizontal_arrows(direction)
         self.attacks = int(attacks)
@@ -155,7 +162,7 @@ class Roar(Command):
             press(Key.ROAR, self.attacks, up_time=0.05)
         key_up(self.direction)
         if self.attacks > 2:
-            time.sleep(0.3)
+            time.sleep(0.25)
         else:
             time.sleep(0.2)
 
@@ -172,17 +179,17 @@ class FlashJump(Command):
         time.sleep(0.1)
         press(Key.FLASH_JUMP, 1)
         if self.direction == 'up':
+            press(Key.ROPE,1)
             press(Key.FLASH_JUMP, 1)
         else:
             press(Key.FLASH_JUMP, 1)
         key_up(self.direction)
-        time.sleep(0.5)
 
-class trinity(Command):
+class Trinity(Command):
     """Uses Roar once."""
 
     def main(self):
-        press(Key.ROAR, 3)
+        press(Key.TRINITY, 2)
 
 class SuperNova(Command):
     """Uses Earth Pulverization once."""
@@ -196,8 +203,29 @@ class Sparkle(Command):
     def main(self):
         press(Key.SPARKLE, 3)
 
+class ErdaShower(Command):
+    """Uses Earth Pulverization once."""
+
+    def main(self):
+        press(Key.ERDA_SHOWER, 3)
+
 class Spotlight(Command):
     """Uses Earth Pulverization once."""
 
     def main(self):
         press(Key.SPOTLIGHT, 3)
+
+
+class Rope(Command):
+    """Uses Earth Pulverization once."""
+
+    def main(self):
+        press(Key.ROPE, 3)
+
+class buffs(Command):
+    """Uses Earth Pulverization once."""
+
+    def main(self):
+        press(Key.DECENT_SHARPEYES, 3)
+        press(Key.PRETTT_EXALT, 3)
+        press(Key.FINAL_CONTRACT, 3)

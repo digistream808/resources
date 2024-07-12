@@ -1,0 +1,29 @@
+*, x=0.302, y=0.590, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Roar, direction=right, attacks=3, repetitions=1
+*, x=0.691, y=0.590, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Roar, direction=right, attacks=3, repetitions=1
+    buffs
+    Rope
+*, x=0.489, y=0.482, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Roar, direction=right, attacks=3, repetitions=1
+    Spotlight
+*, x=0.576, y=0.331, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    ErdaShower
+    Roar, direction=right, attacks=3, repetitions=1
+*, x=0.250, y=0.396, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Roar, direction=right, attacks=3, repetitions=1
+*, x=0.45, y=0.331, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    SuperNova
+    Roar, direction=right, attacks=3, repetitions=1
+*, x=0.799, y=0.360, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Roar, direction=right, attacks=3, repetitions=1
+*, x=0.582, y=0.482, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Roar, direction=right, attacks=3, repetitions=1

@@ -1,18 +1,24 @@
-*, x=0.273, y=0.315, frequency=1, skip=False, adjust=False
+*, x=0.17, y=0.285, frequency=1, skip=False, adjust=False
     Roar, direction=left, attacks=2, repetitions=2
     Roar, direction=right, attacks=2, repetitions=2
-*, x=0.521, y=0.224, frequency=1, skip=False, adjust=False
+*, x=0.45, y=0.382, frequency=1, skip=False, adjust=False
     Roar, direction=left, attacks=2, repetitions=2
     Roar, direction=right, attacks=2, repetitions=2
-    Spotlight
+*, x=0.770, y=0.279, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=2, repetitions=2
+    Roar, direction=right, attacks=2, repetitions=2
 *, x=0.636, y=0.127, frequency=1, skip=False, adjust=False
     Roar, direction=left, attacks=2, repetitions=2
     Roar, direction=right, attacks=2, repetitions=2
     Sparkle
-*, x=0.770, y=0.279, frequency=1, skip=False, adjust=False
+*, x=0.364, y=0.279, frequency=1, skip=False, adjust=false
     Roar, direction=left, attacks=2, repetitions=2
     Roar, direction=right, attacks=2, repetitions=2
 *, x=0.545, y=0.382, frequency=1, skip=False, adjust=False
     Roar, direction=left, attacks=2, repetitions=2
     Roar, direction=right, attacks=2, repetitions=2
     SuperNova
+*, x=0.521, y=0.224, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=2, repetitions=2
+    Roar, direction=right, attacks=2, repetitions=2
+    Spotlight
