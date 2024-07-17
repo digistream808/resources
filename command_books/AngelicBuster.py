@@ -159,12 +159,13 @@ class Roar(Command):
         if config.stage_fright and utils.bernoulli(0.7):
             time.sleep(utils.rand_float(0.1, 0.3))
         for _ in range(self.repetitions):
+            press(Key.JUMP, 1)
             press(Key.ROAR, self.attacks, up_time=0.05)
         key_up(self.direction)
         if self.attacks > 2:
-            time.sleep(0.25)
+            time.sleep(0.35)
         else:
-            time.sleep(0.2)
+            time.sleep(0.25)
 
 
 class FlashJump(Command):
