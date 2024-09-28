@@ -1,0 +1,16 @@
+*, x=0.486, y=0.428, frequency=1, skip=False, adjust=False
+    SINGLE
+    MOB, direction=left, attacks=2, repetitions=4
+    MOB, direction=right, attacks=2, repetitions=4
+    BUFF1
+*, x=0.486, y=0.347, frequency=1, skip=False, adjust=False
+    SINGLE
+    MOB, direction=right, attacks=2, repetitions=4
+    DASH, direction=up
+*, x=0.486, y=0.297, frequency=1, skip=False, adjust=False
+    SINGLE
+    MOB, direction=right, attacks=2, repetitions=4
+*, x=0.500, y=0.365, frequency=1, skip=False, adjust=False
+    SINGLE
+    MOB, direction=right, attacks=2, repetitions=4
+    DASH, direction=down

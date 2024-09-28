@@ -1,0 +1,21 @@
+*, x=0.167, y=0.22, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Roar, direction=right, attacks=3, repetitions=1
+    Spotlight
+    Rope
+*, x=0.6, y=0.188, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Roar, direction=right, attacks=3, repetitions=1
+*, x=0.785, y=0.358, frequency=1, skip=False, adjust=false
+    Roar, direction=left, attacks=3, repetitions=1
+    Roar, direction=right, attacks=3, repetitions=1
+    buffs
+*, x=0.61, y=0.358, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Roar, direction=right, attacks=3, repetitions=1
+    Trinity
+*, x=0.38, y=0.275, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    SuperNova
+    Roar, direction=right, attacks=3, repetitions=1
+    Rope

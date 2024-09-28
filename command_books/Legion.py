@@ -19,9 +19,6 @@ class Key:
     BUFF1 = '2'
     BUFF2 = '3'
 
-    # Buffs Toggle
-    TOGGLE = '4'
-
     # Skills
     MOB = 'q'
     SINGLE = 's'
@@ -48,7 +45,7 @@ def step(direction, target):
             press(Key.JUMP, 3)
         elif direction == 'up':
             press(Key.JUMP, 1)
-    press(Key.FLASH_JUMP, num_presses)
+    press(Key.DASH, num_presses)
 
 
 class Adjust(Command):
@@ -115,7 +112,6 @@ class Buff(Command):
         now = time.time()
 
         if self.cd120_buff_time == 0 or now - self.cd120_buff_time > 60:
-            press(key.BUFF1, 3)
             self.cd60_buff_time = now
         if self.cd180_buff_time == 0 or now - self.cd180_buff_time > 181:
             self.cd180_buff_time = now
@@ -144,7 +140,7 @@ class MOB(Command):
         if config.stage_fright and utils.bernoulli(0.7):
             time.sleep(utils.rand_float(0.1, 0.3))
         for _ in range(self.repetitions):
-            press(Key.STRIKE, self.attacks, up_time=0.05)
+            press(Key.MOB, self.attacks, up_time=0.05)
         key_up(self.direction)
         if self.attacks > 2:
             time.sleep(0.3)
@@ -170,15 +166,30 @@ class FlashJump(Command):
         key_up(self.direction)
         time.sleep(0.5)
 
-class BUFF1(Command):
-    """Uses Earth Pulverization once."""
+class DASH(Command):
+    """Performs a flash jump in the given direction."""
 
+    def __init__(self, direction):
+        super().__init__(locals())
+        self.direction = settings.validate_arrows(direction)
+
+    def main(self):
+        key_down(self.direction)
+        time.sleep(0.1)
+        press(Key.DASH, 2)
+
+class BUFF1(Command):
     def main(self):
         press(Key.BUFF1, 3)
 
 class BUFF2(Command):
-    """Uses Earth Pulverization once."""
-
     def main(self):
         press(Key.BUFF2, 3)
 
+class SINGLE(Command):
+    def main(self):
+        press(Key.SINGLE, 3)
+
+class SUMMON(Command):
+    def main(self):
+        press(Key.SUMMON, 3)

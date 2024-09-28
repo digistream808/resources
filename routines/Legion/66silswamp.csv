@@ -1,0 +1,19 @@
+*, x=0.478, y=0.446, frequency=1, skip=False, adjust=False
+    MOB, direction=right, attacks=2, repetitions=2
+    SINGLE
+    DASH, direction=up
+*, x=0.439, y=0.318, frequency=1, skip=False, adjust=False
+    MOB, direction=right, attacks=2, repetitions=2
+    SINGLE
+    FLASH, direction=up
+*, x=0.420, y=0.229, frequency=1, skip=False, adjust=False
+    MOB, direction=right, attacks=2, repetitions=2
+    SINGLE
+    FLASH, direction=up
+*, x=0.465, y=0.108, frequency=1, skip=False, adjust=False
+    MOB, direction=right, attacks=2, repetitions=2
+    SINGLE
+*, x=0.439, y=0.318, frequency=1, skip=False, adjust=False
+    MOB, direction=right, attacks=2, repetitions=2
+    SINGLE
+    FLASH, direction=down

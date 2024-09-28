@@ -1,0 +1,18 @@
+*, x=0.204, y=0.430, frequency=1, skip=False, adjust=False
+    BUFF1
+    MOB, direction=left, attacks=3, repetitions=3
+    MOB, direction=right, attacks=3, repetitions=3
+*, x=0.581, y=0.430, frequency=1, skip=False, adjust=False
+    FlashJump, direction=down
+    MOB, direction=left, attacks=3, repetitions=3
+    MOB, direction=right, attacks=3, repetitions=3
+    SINGLE
+*, x=0.780, y=0.419, frequency=1, skip=False, adjust=False
+    FlashJump, direction=down
+    MOB, direction=left, attacks=3, repetitions=3
+    MOB, direction=right, attacks=3, repetitions=3
+    DASH, direction=left
+*, x=0.421, y=0.430, frequency=1, skip=False, adjust=False
+    MOB, direction=left, attacks=3, repetitions=3
+    MOB, direction=right, attacks=3, repetitions=3
+    SUMMON

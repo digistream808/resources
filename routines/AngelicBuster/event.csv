@@ -1,0 +1,6 @@
+*, x=0.353, y=0.134, frequency=1, skip=False, adjust=False
+    Roar, direction=right, attacks=2, repetitions=1
+    Wait, duration=2
+*, x=0.866, y=0.225, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=2, repetitions=1
+    Wait, duration=5
