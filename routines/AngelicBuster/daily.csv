@@ -1,0 +1,5 @@
+*, x=0.500, y=0.304, frequency=1, skip=False, adjust=False
+    Walk, direction=right, duration=1
+    ErdaShower
+    Wait, duration=3
+    Walk, direction=left, duration=1

@@ -23,6 +23,7 @@ class Key:
     DECENT_SHARPEYES = '6'
     DECENT_SPEED = '7'
     COMBAT_ORDERS = '8'
+    LEGION_GOLD = '0'
 
     # Skills
     TRINITY = 'a'
@@ -125,7 +126,7 @@ class Buff(Command):
         self.decent_buff_time = 0
 
     def main(self):
-        buffs = []
+        buffs = [Key.LEGION_GOLD]
         now = time.time()
 
         if self.cd120_buff_time == 0 or now - self.cd120_buff_time > 120:
@@ -138,7 +139,7 @@ class Buff(Command):
         if self.cd900_buff_time == 0 or now - self.cd900_buff_time > 950:
             press(Key.NOVA_WARRIOR,3)
             self.cd900_buff_time = now
-        if self.decent_buff_time == 0 or now - self.decent_buff_time > 270:
+        if self.decent_buff_time == 0 or now - self.decent_buff_time > 1820:
 	        for key in buffs:
 		        press(key, 1, up_time=0.3)
 	        self.decent_buff_time = now		
