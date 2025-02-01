@@ -1,0 +1,27 @@
+*, x=0.198, y=0.364, frequency=1, skip=False, adjust=False
+    Roar, direction=right, attacks=3, repetitions=1
+    Spotlight
+*, x=0.364, y=0.364, frequency=1, skip=False, adjust=False
+    Roar, direction=right, attacks=3, repetitions=1
+    Rope
+*, x=0.487, y=0.246, frequency=1, skip=False, adjust=False
+    Roar, direction=right, attacks=3, repetitions=1
+    Sparkle
+*, x=0.622, y=0.364, frequency=1, skip=False, adjust=False
+    Roar, direction=right, attacks=3, repetitions=1
+    buffs
+    SuperNova
+    Rope
+*, x=0.742, y=0.278, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+*, x=0.866, y=0.209, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+*, x=0.642, y=0.209, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+*, x=0.428, y=0.246, frequency=1, skip=False, adjust=False
+    Rope
+    Roar, direction=left, attacks=3, repetitions=1
+    ErdaShower
+*, x=0.198, y=0.209, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Trinity

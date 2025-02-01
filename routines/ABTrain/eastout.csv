@@ -1,0 +1,52 @@
+*, x=0.624, y=0.316, frequency=1, skip=False, adjust=False
+    Adjust, x=0.55, y=0.316, max_steps=5
+    Roar, direction=right, attacks=3, repetitions=1
+    ErdaShower
+    FlashJump, direction=left
+*, x=0.39, y=0.175, frequency=1, skip=False, adjust=False
+    Rope
+    Wait, duration=0.3
+    Adjust, x=0.42, y=0.175, max_steps=2
+    sol
+    Roar, direction=left, attacks=3, repetitions=1
+    Sparkle
+*, x=0.17, y=0.160, frequency=1, skip=False, adjust=False
+    Rope
+    Adjust, x=0.17, y=0.16, max_steps=5
+    Wait, duration=0.3
+    sol
+    Roar, direction=left, attacks=3, repetitions=1
+*, x=0.179, y=0.316, frequency=1, skip=False, adjust=False
+    Adjust, x=0.179, y=0.316, max_steps=5
+    Walk, direction=right, duration=0.1
+    holdcombo
+    Wait, duration=2
+    SuperNova
+    holdcombo
+    Wait, duration=2
+    Adjust, x=0.29, y=0.316, max_steps=3
+    holdcombo
+    Wait, duration=1
+    holdcombo
+    Wait, duration=2
+    Adjust, x=0.26, y=0.316, max_steps=2
+    holdcombo
+    Wait, duration=2
+    holdcombo
+    Wait, duration=2
+    holdcombo
+    Adjust, x=0.29, y=0.316, max_steps=2
+    holdcombo
+    Wait, duration=2
+    holdcombo
+    Wait, duration=2
+    holdcombo
+    Adjust, x=0.26, y=0.316, max_steps=2
+    Walk, direction=right, duration=0.1
+    Wait, duration=2
+    holdcombo
+    Wait, duration=2
+    holdcombo
+    Wait, duration=2
+    holdcombo
+    Spotlight

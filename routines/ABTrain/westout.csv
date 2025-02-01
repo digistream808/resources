@@ -1,0 +1,38 @@
+*, x=0.792, y=0.316, frequency=1, skip=False, adjust=False
+    Adjust, x=0.792, y=0.316, max_steps=5
+    ErdaShower
+    Roar, direction=right, attacks=3, repetitions=1
+    ErdaShower
+    Rope
+*, x=0.840, y=0.175, frequency=1, skip=False, adjust=False
+    Adjust, x=0.84, y=0.175, max_steps=5
+    Wait, duration=0.5
+    sol
+    Roar, direction=left, attacks=3, repetitions=1
+    Sparkle
+*, x=0.552, y=0.156, frequency=1, skip=False, adjust=False
+    Adjust, x=0.552, y=0.156, max_steps=5
+    sol
+    Roar, direction=right, attacks=3, repetitions=1
+*, x=0.316, y=0.316, frequency=1, skip=False, adjust=False
+    ribbon
+*, x=0.509, y=0.316, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=2
+    Wait, duration=3
+    Roar, direction=left, attacks=3, repetitions=2
+    Adjust, x=0.509, y=0.316, max_steps=2
+    Wait, duration=3
+    Roar, direction=right, attacks=3, repetitions=2
+    Wait, duration=3
+    Roar, direction=right, attacks=3, repetitions=2
+    Wait, duration=3
+    Roar, direction=right, attacks=3, repetitions=2
+    Wait, duration=3
+    Roar, direction=right, attacks=3, repetitions=2
+    Wait, duration=3
+    Roar, direction=right, attacks=3, repetitions=2
+    Wait, duration=3
+    Roar, direction=right, attacks=3, repetitions=2
+    Wait, duration=3
+    Roar, direction=right, attacks=3, repetitions=2
+    Spotlight

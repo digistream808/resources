@@ -9,7 +9,7 @@
     Roar, direction=right, attacks=3, repetitions=1
     ErdaShower
 *, x=0.809, y=0.299, frequency=1, skip=False, adjust=False
-    Roar, direction=right, attacks=3, repetitions=1
+    Roar, direction=left, attacks=3, repetitions=1
     Trinity
     Rope
 *, x=0.685, y=0.172, frequency=1, skip=False, adjust=False

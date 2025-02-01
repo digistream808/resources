@@ -17,23 +17,25 @@ class Key:
     # Buffs
     SOULSEEK = '1'
     NOVA_WARRIOR = '2'
-    FINAL_CONTRACT = '3'
-    PRETTT_EXALT = '4' 
-    ROLL = '5'
-    DECENT_SHARPEYES = '6'
-    DECENT_SPEED = '7'
-    COMBAT_ORDERS = '8'
-    LEGION_GOLD = '0'
+    OVERDRIVE = '3'
+    PRETTT_EXALT = '4'
+    TERMS = '5' 
+    ROLL = '6'
+    XP_30 = 'f5'
+    LEGION_GOLD = 'f4'
+
 
     # Skills
-    TRINITY = 'a'
+    TRINITY = 'w'
     ROAR = 'q'
     SUPERNOVA = 'f'
     SPOTLIGHT = 'e'
     SPARKLE = 'r'
-    RIBBON = '7'
-    FUSION = 'w'
-    Erda = 't'
+    RIBBON = 'a'
+    Erda = 'j'
+    Sol = 'h'
+    Finale = '8'
+
 
 
 #########################
@@ -46,8 +48,6 @@ def step(direction, target):
     """
 
     num_presses = 2
-    mob = time.time()
-    atk = mob
     if direction == 'up' or direction == 'down':
         num_presses = 1
     if config.stage_fright and direction != 'up' and utils.bernoulli(0.75):
@@ -59,12 +59,6 @@ def step(direction, target):
         elif direction == 'up':
             press(Key.JUMP, 1)
     press(Key.FLASH_JUMP, num_presses)
-    if mob - atk > utils.rand_float(0.05, 0.15):
-        press(Key.ROAR,2)
-        atk = mob
-
-    
-
 
 class Adjust(Command):
     """Fine-tunes player position using small movements."""
@@ -116,38 +110,34 @@ class Adjust(Command):
 
 
 class Buff(Command):
-    """Uses each of DW's buffs once."""
 
     def __init__(self):
         super().__init__(locals())
+        self.cd60_buff_time = 0
         self.cd120_buff_time = 0
-        self.cd180_buff_time = 0
-        self.cd200_buff_time = 0
-        self.cd240_buff_time = 0
+        self.cd300_buff_time = 0
         self.cd900_buff_time = 0
         self.decent_buff_time = 0
 
     def main(self):
-        buffs = [Key.LEGION_GOLD, Key.COMBAT_ORDERS, Key.NOVA_WARRIOR]
+        buffs = [Key.PRETTT_EXALT, Key.TERMS]
+        Gains = [Key.LEGION_GOLD, Key.XP_30]
+
         now = time.time()
 
+        if self.cd60_buff_time == 0 or now - self.cd60_buff_time > 60:
+	        for key in buffs:
+                    press(key, 1, up_time=0.5)
+                    self.cd60_buff_time = now
         if self.cd120_buff_time == 0 or now - self.cd120_buff_time > 120:
-            self.cd120_buff_time = now
-        if self.cd180_buff_time == 0 or now - self.cd180_buff_time > 181:
             press(Key.ROLL,4)
             self.cd180_buff_time = now
-        if self.cd240_buff_time == 0 or now - self.cd240_buff_time > 240:
-            self.cd240_buff_time = now
-        if self.cd900_buff_time == 0 or now - self.cd900_buff_time > 950:
-            self.cd900_buff_time = now
+        if self.cd300_buff_time == 0 or now - self.cd300_buff_time > 300:
+            self.cd300_buff_time = now
         if self.decent_buff_time == 0 or now - self.decent_buff_time > 1820:
-            for key in buffs:
-                press(key, 1, up_time=0.3)
-                
             self.decent_buff_time = now		
 
 class Roar(Command):
-    """Attacks using 'Solar Slash' in a given direction."""
 
     def __init__(self, direction, attacks=3, repetitions=1):
         super().__init__(locals())
@@ -162,8 +152,7 @@ class Roar(Command):
         if config.stage_fright and utils.bernoulli(0.7):
             time.sleep(utils.rand_float(0.1, 0.3))
         for _ in range(self.repetitions):
-            press(Key.JUMP, 1)
-            press(Key.ROAR, self.attacks, up_time=0.05)
+            press(Key.ROAR, self.attacks, up_time=0.1)
         key_up(self.direction)
         if self.attacks > 2:
             time.sleep(0.35)
@@ -183,46 +172,32 @@ class FlashJump(Command):
         time.sleep(0.1)
         press(Key.FLASH_JUMP, 1)
         if self.direction == 'up':
-            press(Key.ROPE,1)
             press(Key.FLASH_JUMP, 1)
         else:
             press(Key.FLASH_JUMP, 1)
         key_up(self.direction)
 
 class Trinity(Command):
-    """Uses Roar once."""
-
     def main(self):
         press(Key.TRINITY, 2)
 
 class SuperNova(Command):
-    """Uses Earth Pulverization once."""
-
     def main(self):
         press(Key.SUPERNOVA, 3)
 
 class Sparkle(Command):
-    """Uses Earth Pulverization once."""
-
     def main(self):
         press(Key.SPARKLE, 3)
 
 class ErdaShower(Command):
-    """Uses Earth Pulverization once."""
-
     def main(self):
         press(Key.Erda, 3)
 
 class Spotlight(Command):
-    """Uses Earth Pulverization once."""
-
     def main(self):
         press(Key.SPOTLIGHT, 3)
 
-
 class Rope(Command):
-    """Uses Earth Pulverization once."""
-
     def main(self):
         press(Key.ROPE, 3)
 
@@ -230,13 +205,14 @@ class ribbon(Command):
     def main(self):
         press(Key.RIBBON, 3)
 
-class fusion(Command):
+class sol(Command):
     def main(self):
-        press(Key.FUSION, 3)
+        press(Key.Sol, 3)
 
-class buffs(Command):
-
+class finale(Command):
     def main(self):
-        press(Key.DECENT_SHARPEYES, 3)
-        press(Key.PRETTT_EXALT, 3)
-        press(Key.FINAL_CONTRACT, 3)
+        press(Key.Finale,3)
+
+class holdcombo(Command):
+    def main(self):
+        press(Key.ROAR, 3, up_time=0.25)
