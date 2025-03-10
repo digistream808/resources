@@ -2,7 +2,14 @@
     Adjust, x=0.55, y=0.316, max_steps=5
     Roar, direction=right, attacks=3, repetitions=1
     ErdaShower
-    FlashJump, direction=left
+*, x=0.39, y=0.175, frequency=1, skip=False, adjust=False
+    Rope
+    Wait, duration=0.3
+    Adjust, x=0.42, y=0.175, max_steps=2
+    sol
+    Roar, direction=left, attacks=3, repetitions=1
+    Sparkle
+
 *, x=0.39, y=0.175, frequency=1, skip=False, adjust=False
     Rope
     Wait, duration=0.3
