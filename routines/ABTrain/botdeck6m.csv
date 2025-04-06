@@ -17,6 +17,7 @@
     Roar, direction=left, attacks=3, repetitions=1
     Adjust, x=0.17, y=0.24, max_steps=3
     sol
+    Fall, distance=0.15
 *, x=0.267, y=0.326, frequency=1, skip=False, adjust=False
     Roar, direction=right, attacks=3, repetitions=1
     Adjust, x=0.267, y=0.326, max_steps=3
