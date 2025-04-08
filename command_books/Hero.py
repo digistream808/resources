@@ -163,7 +163,7 @@ class Basic_Sword(Command):
         if config.stage_fright and utils.bernoulli(0.7):
             time.sleep(utils.rand_float(0.1, 0.3))
         for _ in range(self.repetitions):
-            press(Key.RISE, self.attacks, up_time=0.05)
+            press(Key.BASIC, self.attacks, up_time=0.05)
         key_up(self.direction)
         if self.attacks > 2:
             time.sleep(0.3)
@@ -177,4 +177,14 @@ class Rise(Command):
     def main(self):
         press(Key.RISE, 1, up_time=0.05)	
 
-       
+
+class Water(Command):
+    """Uses 'CruelStab' once."""
+
+    def main(self):
+        press(Key.WATER, 1, up_time=0.05)	
+
+
+
+
+              

@@ -1,9 +1,9 @@
 *, x=0.787, y=0.241, frequency=1, skip=False, adjust=False
     Rope
+    FlashJump, direction=left
     Roar, direction=left, attacks=3, repetitions=1
     Adjust, x=0.85, y=0.241, max_steps=2
     sol
-    Rope
 *, x=0.555, y=0.211, frequency=1, skip=False, adjust=False
 *, x=0.4, y=0.211, frequency=1, skip=False, adjust=False
     Rope
