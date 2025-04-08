@@ -1,0 +1,12 @@
+*, x=0.133, y=0.264, frequency=1, skip=False, adjust=False
+    Basic_Sword, direction=right, attacks=6, repetitions=6
+    WF
+*, x=0.850, y=0.264, frequency=1, skip=False, adjust=False
+    Basic_Sword, direction=left, attacks=4, repetitions=4
+    FlashJump, direction=up
+    Rise
+*, x=0.4, y=0.1, frequency=1, skip=False, adjust=False
+    Water
+    Basic_Sword, direction=left, attacks=3, repetitions=3
+*, x=0.260, y=0.1, frequency=1, skip=False, adjust=False
+    Basic_Sword, direction=left, attacks=3, repetitions=3

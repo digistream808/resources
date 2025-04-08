@@ -23,6 +23,7 @@ class Key:
     BASIC = 'ctrl' 
     WATER = 'w' 
     RISE = 'r'
+    WATERFALL = 'D'
 
 
 #########################
@@ -115,7 +116,7 @@ class Buff(Command):
 
         if self.cd120_buff_time == 0 or now - self.cd120_buff_time > 120:
             press(Key.WARRIOR,2)
-            self.cd20_buff_time = now
+            self.cd120_buff_time = now
         if self.cd180_buff_time == 0 or now - self.cd180_buff_time > 180:
 	        self.cd180_buff_time = now
         if self.cd200_buff_time == 0 or now - self.cd200_buff_time > 200:
@@ -124,9 +125,9 @@ class Buff(Command):
 	        self.cd240_buff_time = now
         if self.cd900_buff_time == 0 or now - self.cd900_buff_time > 900:
 	        self.cd900_buff_time = now
-        if self.decent_buff_time == 0 or now - self.decent_buff_time > settings.buff_cooldown:
-	        for key in buffs:
-		        press(key, 3, up_time=0.5)
+        if self.decent_buff_time == 0 or now - self.decent_buff_time > 120:
+	        # for key in buffs:
+		    #     press(key, 3, up_time=0.5)
 	        self.decent_buff_time = now		
 
 class FlashJump(Command):
@@ -185,6 +186,10 @@ class Water(Command):
         press(Key.WATER, 1, up_time=0.05)	
 
 
+class WF(Command):
+    """Uses 'CruelStab' once."""
 
+    def main(self):
+        press(Key.WATERFALL, 1, up_time=0.05)	
 
               
