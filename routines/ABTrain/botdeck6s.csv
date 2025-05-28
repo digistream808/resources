@@ -1,13 +1,11 @@
-*, x=0.7, y=0.241, frequency=1, skip=False, adjust=False
-    Rope
+*, x=0.8, y=0.241, frequency=1, skip=False, adjust=False
+    Adjust, x=0.77, y=0.241, max_steps=5
     Roar, direction=left, attacks=3, repetitions=1
-    Rope
-    Adjust, x=0.77, y=0.24, max_steps=3
     sol
 *, x=0.555, y=0.211, frequency=1, skip=False, adjust=False
-*, x=0.35, y=0.23, frequency=1, skip=False, adjust=False
-    Rope
-    Adjust, x=0.4, y=0.241, max_steps=3
+*, x=0.35, y=0.235, frequency=1, skip=False, adjust=False
+    Roar, direction=left, attacks=3, repetitions=1
+    Adjust, x=0.42, y=0.235, max_steps=3
     sol
 *, x=0.21, y=0.241, frequency=1, skip=False, adjust=False
     ribbon
@@ -21,35 +19,36 @@
     ErdaShower
     Trinity
     Sparkle
-*, x=0.6, y=0.396, frequency=1, skip=False, adjust=False
-    Adjust, x=0.701, y=0.396, max_steps=5
+*, x=0.65, y=0.396, frequency=1, skip=False, adjust=False
     Walk, direction=left, duration=0.1
     holdcombo
     Wait, duration=2
     holdcombo
     Wait, duration=2
-    Adjust, x=0.6, y=0.396, max_steps=3
-    holdcombo
-    Wait, duration=1
-    holdcombo
-    Walk, direction=left, duration=0.1
-    holdcombo
-    Adjust, x=0.65, y=0.396, max_steps=1
-    holdcombo
-    Wait, duration=2
-    holdcombo
-    Wait, duration=2
-    holdcombo
     Walk, direction=right, duration=0.1
     holdcombo
-    Adjust, x=0.67, y=0.396, max_steps=1
+    Wait, duration=2
     holdcombo
+    Wait, duration=2
     Walk, direction=left, duration=0.1
     holdcombo
     Wait, duration=2
     holdcombo
-    Adjust, x=0.65, y=0.396, max_steps=1
+    Wait, duration=2
     Walk, direction=right, duration=0.1
+    holdcombo
+    Wait, duration=2
+    holdcombo
+    Wait, duration=2
+    Walk, direction=left, duration=0.1
+    holdcombo
+    Wait, duration=2
+    holdcombo
+    Wait, duration=2
+    Walk, direction=right, duration=0.1
+    holdcombo
+    Wait, duration=2
+    Walk, direction=left, duration=0.1
     SuperNova
     holdcombo
     Spotlight

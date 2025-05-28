@@ -5,22 +5,18 @@
     Adjust, x=0.757, y=0.241, max_steps=3
     sol
     Rope
-*, x=0.555, y=0.241, frequency=1, skip=False, adjust=False
-    Roar, direction=left, attacks=3, repetitions=1
 *, x=0.4, y=0.211, frequency=1, skip=False, adjust=False
     Rope
-    Adjust, x=0.43, y=0.241, max_steps=3
+    Adjust, x=0.43, y=0.23, max_steps=3
     sol
-*, x=0.21, y=0.230, frequency=1, skip=False, adjust=False
+*, x=0.19, y=0.230, frequency=1, skip=False, adjust=False
     ribbon
-    Rope
     Roar, direction=left, attacks=3, repetitions=1
-    Adjust, x=0.17, y=0.24, max_steps=3
     sol
     Fall, distance=0.15
-*, x=0.267, y=0.326, frequency=1, skip=False, adjust=False
+*, x=0.2, y=0.396, frequency=1, skip=False, adjust=False
     Roar, direction=right, attacks=3, repetitions=1
-    Adjust, x=0.267, y=0.326, max_steps=3
+    Adjust, x=0.2, y=0.396, max_steps=3
     ErdaShower
     Trinity
     Sparkle
@@ -29,16 +25,11 @@
     Walk, direction=left, duration=0.1
     holdcombo
     Wait, duration=2
-    SuperNova
     holdcombo
     Wait, duration=2
     Adjust, x=0.6, y=0.396, max_steps=3
     holdcombo
     Wait, duration=1
-    holdcombo
-    Wait, duration=2
-    holdcombo
-    Wait, duration=2
     holdcombo
     Walk, direction=left, duration=0.1
     holdcombo
@@ -65,6 +56,7 @@
     Walk, direction=right, duration=0.1
     Wait, duration=2
     holdcombo
+    SuperNova
     Spotlight
     Rope
     finale

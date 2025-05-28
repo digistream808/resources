@@ -55,7 +55,7 @@ def step(direction, target):
     d_y = target[1] - config.player_pos[1]
     if abs(d_y) > settings.move_tolerance :
         if direction == 'down':
-            press(Key.JUMP, 3)
+            press(Key.JUMP, 1)
         elif direction == 'up':
             press(Key.JUMP, 1)
     press(Key.FLASH_JUMP, num_presses)
@@ -101,7 +101,7 @@ class Adjust(Command):
                     else:
                         key_down('down')
                         time.sleep(0.05)
-                        press(Key.JUMP, 3, down_time=0.1)
+                        press(Key.JUMP, 2, down_time=0.1)
                         key_up('down')
                         time.sleep(0.05)
                     counter -= 1
